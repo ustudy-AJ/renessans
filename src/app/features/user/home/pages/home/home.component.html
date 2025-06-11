@@ -1,0 +1,30 @@
+
+<div class="max-w-[1640px] mx-auto">
+  <app-hero></app-hero>
+</div>
+
+<div class="bg-[#F6F7FB] px-[20px] pb-[120px]">
+  <div class="max-w-[1640px] mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[16px] mb-[120px] -translate-y-4">
+      @for(statistic of homeStatistic;track statistic.text) {
+        <app-statistic [data]="statistic"></app-statistic>
+      }
+    </div>
+    <div>
+      <div class="flex items-center justify-between">
+        <h3 class="text-[40px] text-[#020A0C] font-[700] font-['Lato']! mb-[20px]">To‘garaklar</h3>
+        <a href="" class="py-[12px] px-[16px] bg-[#1C79C01A] rounded-[12px] flex items-center gap-[12px]">
+          <p class="text-[#1C79C0]">Barcha to‘garaklar</p>
+          <span class="icon-arrow-right text-[#1C79C0]!"></span>
+        </a>
+      </div>
+      <div class="grid grid-cols-5 gap-[16px]">
+        @for(lesson of lessons; track lesson.title){
+          <app-lessons [data]="lesson"></app-lessons>
+        }
+      </div>
+    </div>
+
+  </div>
+</div>
+

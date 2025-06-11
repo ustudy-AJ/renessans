@@ -1,0 +1,124 @@
+
+<div class="grid grid-cols-10 gap-[16px]">
+  <div class="col-span-8 col-start-1">
+    <div class="flex gap-[12px] pb-[12px]">
+      <div class="py-[11px] px-[12px] border-[1px] border-[#DEE1EB] rounded-[12px] flex items-center gap-[12px] bg-[#fff] grow">
+        <span class="icon-search text-[22px] text-[#1C79C0]"></span>
+        <input type="text" class="w-full placeholder:text-[#757D8E] text-[20px] font-[500] outline-none border-none " placeholder="Izlash" >
+      </div>
+      <div class="flex items-center gap-[3px] p-[3px] rounded-[12px] bg-[#EAECF2]">
+        <button type="button" class="bg-[#fff] py-[9px] px-[12px] flex items-center gap-[8px] h-full rounded-[12px]">
+          <span class="icon-grid-1 text-[22px] text-[#1C79C0]"></span>
+          <p class="text-[#020A0C] text-[20px] font-[600]">2 talik</p>
+        </button>
+        <button type="button" class=" py-[9px] px-[12px] flex items-center gap-[8px] h-full rounded-[12px]">
+          <span class="icon-grid-4 text-[22px] text-[#757D8E]"></span>
+          <p class="text-[#757D8E] text-[20px] font-[600]">4 talik</p>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-[12px] pb-[16px]">
+      @for(club of currentData; track club.id){
+        <app-club-block [club]="club"></app-club-block>
+      }
+    </div>
+
+    @if(rowsCount>1){
+      <div class="flex justify-center">
+        <p-paginator
+        class="p-paginator-p"
+        (onPageChange)="onPageChange($event)"
+        [first]="first"
+        [rows]="rows"
+        [totalRecords]="rowsCount"
+        [showPageLinks]="true"
+        [showFirstLastIcon]="false"
+          />
+      </div>
+    }
+
+  </div>
+
+  <div class="col-span-2 col-start-9 ">
+    <div class="relative rounded-2xl overflow-hidden w-full border border-[#EAECF2] mb-[16px]">
+      <img src="./assets/imgs/map.png" alt="Map" class="w-full" />
+      <button class="absolute bottom-4 left-1/2 bg-blue-600 -translate-x-1/2 rounded-xl flex items-center gap-2 py-[12px] px-[16px]">
+        <span class="icon-map-point text-[24px]"></span>
+        <p class="text-[#FFFFFF] text-[20px] font-[600] leading-[120%] text-nowrap">Xaritadan ko‘rish</p>
+      </button>
+    </div>
+
+    <div class="rounded-2xl bg-[#fff] p-[16px] border border-[#EAECF2] flex flex-col gap-[16px]">
+      <div>
+        <p class="text-[24px] font-[700] font-['Lato']! leading-[120%]">Filter</p>
+      </div>
+      <hr class="text-[#EAECF2]">
+
+      <div class="flex flex-col gap-[12px]">
+        <p class="text-[#020A0C] text-[20px] font-[600] leanding-[120%]">To‘garaklar</p>
+
+        <p-select [options]="clubsCategory" [(ngModel)]="setClubsCategory" [checkmark]="true" optionLabel="name" [showClear]="true" placeholder="Select a City" class="font-['Nunito']! text-[20px] font-[500] leanding-[130%]" />
+
+        <div class="flex flex-col gap-[10px]">
+          @for(category of clubsCategory; track category.id){
+            <label class="flex items-center gap-[10px]">
+              <input type="checkbox" class="w-4 h-4" />
+              <p class="text-[#393F48] text-[18px] font-[500] leanding-[130%]">{{ category.name }}</p>
+            </label>
+          }
+        </div>
+      </div>
+
+      <hr class="text-[#EAECF2]">
+
+      <div class="flex flex-col gap-[12px]">
+        <p class="text-[#020A0C] text-[20px] font-[600] leanding-[120%]">Joylashuv</p>
+        <p-select [options]="clubsCategory" [(ngModel)]="setClubsCategory" [checkmark]="true" optionLabel="name" [showClear]="true" placeholder="Viloyatni tanlang" class="font-['Nunito']! text-[20px] font-[500] leanding-[130%]" />
+        <div class="flex flex-col gap-[10px]">
+          @for(category of clubsCategory; track category.id){
+            <label class="flex items-center gap-[10px]">
+              <input type="checkbox" class="w-4 h-4" />
+              <p class="text-[#393F48] text-[18px] font-[500] leanding-[130%]">{{ category.name }}</p>
+            </label>
+          }
+        </div>
+      </div>
+
+      <hr class="text-[#EAECF2]">
+
+      <div class="flex flex-col gap-[12px]">
+        <p class="text-[#020A0C] text-[20px] font-[600] leanding-[120%]">Joylashuv</p>
+        <div class="flex flex-col gap-[10px]">
+          @for(category of clubsCategory; track category.id){
+            <label class="flex items-center gap-[10px]">
+              <input type="checkbox" class="w-4 h-4" />
+              <p class="text-[#393F48] text-[18px] font-[500] leanding-[130%]">{{ category.name }}</p>
+            </label>
+          }
+        </div>
+      </div>
+
+      <hr class="text-[#EAECF2]">
+
+      <div class="flex flex-col gap-[12px]">
+        <p class="text-[#020A0C] text-[20px] font-[600] leanding-[120%]">Vaqt intervali</p>
+
+        <div class="flex justify-between mb-[26px]">
+          <p class="px-[8px] py-[4px] bg-white border border-[#EAECF2] rounded-[8px] text-[#393F48] text-[18px] font-[500] leanding-[130%]">{{ getTimeString(timeRange[0]) }}</p>
+          <p class="px-[8px] py-[4px] bg-white border border-[#EAECF2] rounded-[8px] text-[#393F48] text-[18px] font-[500] leanding-[130%]">{{ getTimeString(timeRange[1]) }}</p>
+        </div>
+
+        <p-slider
+          [(ngModel)]="timeRange"
+          [min]="0"
+          [max]="1440"
+          [step]="15"
+          [range]="true"
+          styleClass="w-full custom-time-slider"
+        ></p-slider>
+      </div>
+
+    </div>
+  </div>
+</div>

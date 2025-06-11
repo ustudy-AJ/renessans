@@ -1,0 +1,62 @@
+
+@if(news){
+  <div class="max-w-[1640px] mx-auto pt-[80px] pb-[120px]">
+    <div class="max-w-[1088px] mx-auto pb-[120px]">
+      <div class="mb-[16px]">
+        <app-breadcrumb></app-breadcrumb>
+      </div>
+
+      <h3 class="text-[40px] font-[700] font-['Lato']! leading-[120%] mb-[16px]">{{news.text}}</h3>
+
+      <div class="flex gap-[20px] mb-[16px]">
+        <div class="flex items-center gap-[6px]">
+          <span class="icon-calendar before:text-[#1C79C0]! text-[22px]"></span>
+          <p class="text-[#1C79C0] text-[20px] font-[600]">{{news.date | date:"dd.MM.yyyy"}}</p>
+          <!-- <p class="text-[#1C79C0] text-[20px] font-[600]">12.23.2002</p> -->
+        </div>
+        <div class="flex items-center gap-[6px]">
+          <span class="icon-view before:text-[#1C79C0]!"></span>
+          <p class="text-[#1C79C0] text-[20px] font-[600]">{{news.views}}</p>
+          <!-- <p class="text-[#1C79C0] text-[20px] font-[600]">120</p> -->
+        </div>
+      </div>
+
+      <div class="rounded-[16px] h-[680px] w-full mb-[20px] bg-cover" [style.backgroundImage]="'url(' + news.imgUrl + ')'">
+      </div>
+
+
+      <div class="">
+        <p class="text-[20px] font-[500] leading-[130%] indent-[1em]">
+          O‘quvchilarning bo‘sh vaqtlaridan samarali foydalanish ularning bilim samaradorliklarini oshishiga, dunyoqarashlari kengayishiga, kelajak uchun aniq maqsad qo‘yishlarida muhim omil hisoblanadi.
+        </p>
+        <p class="text-[20px] font-[500] leading-[130%] indent-[1em]">Bugungi kunda Jizzax  viloyati, G’allaorol tuman “Barkamol avlod” bolalar maktabida jami 1870 nafar to‘garak a’zolari mavjud.</p>
+
+        <p class="text-[20px] font-[500] leading-[130%]">Xususan:</p>
+        <ul class="ml-[26px]">
+          <li class="text-[20px] font-[500] leading-[130%]">“Madaniyat va san’at” yo‘nalishida 7 to‘garak, 220 nafar to‘garak a’zolari,</li>
+          <li class="text-[20px] font-[500] leading-[130%]">“Texnika, konstruktorlik va modellashtirish” yo‘nalishida 6 to‘garak 160  nafar to‘garak a’zolari,</li>
+          <li class="text-[20px] font-[500] leading-[130%]">“Jismoniy tarbiya va sport” yo‘nalishida 10 to‘garak, 380  nafar to‘garak a’zolari</li>
+          <li class="text-[20px] font-[500] leading-[130%]">“Hunarmandchilik va qo‘l mehnati” yo‘nalishida 17 to‘garak, 530 nafar to‘garak a’zolari</li>
+          <li class="text-[20px] font-[500] leading-[130%]">“Turizm va ekologiya” yo‘nalishida 1 to‘garak, 30 nafar to‘garak a’zolari</li>
+          <li class="text-[20px] font-[500] leading-[130%]">“Oliy ta’lim muassasalari va maktabga tayyorlov” yo‘nalishida 10 to‘garak, 390 nafar to‘garak a’zolari</li>
+          <li class="text-[20px] font-[500] leading-[130%]">“Xorijiy tillar” yo‘nalishida 4 to‘garak, 160 nafar to‘garak a’zolari.</li>
+          <li class="text-[20px] font-[500] leading-[130%]">Hozirgi kunda umumiy o‘rta ta’lim maktablaridagi tarmoq to‘garaklar soni  33 ta bo‘lib, to‘garak a’zolari 1110 nafarni tashkil etadi.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="">
+      <h3 class="text-[40px] font-[700] font-['Lato']! leading-[120%] mb-[20px]">O‘xshash yangiliklar</h3>
+      <div class="grid grid-cols-4 gap-[16px] mb-[16px]">
+        @for(data of newsData; track data.id;let i=$index){
+          @if(4 > i){
+            <app-news-block [data]="data"></app-news-block>
+          }
+        }
+      </div>
+    </div>
+  </div>
+}
+
+
+

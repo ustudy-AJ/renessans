@@ -1,0 +1,129 @@
+
+
+
+@if(club){
+  <div class="bg-[#F6F7FB]">
+    <div class="max-w-[1400px] mx-auto pt-[80px] pb-[120px] ">
+      <div class="mb-[16px]">
+        <app-breadcrumb></app-breadcrumb>
+      </div>
+      <div class="mb-[20px]">
+        <p class="text-[#020A0C] text-[40px] font-[700] font-['Lato']! leanding-[120%]">Futbol to‘garagi</p>
+      </div>
+      <div class="grid grid-cols-12 gap-[16px]">
+        <div class="col-span-9 col-start-1">
+          <div class="grid grid-cols-6 gap-[16px] mb-[16px]">
+            <div class="rounded-2xl overflow-hidden max-h-[338px] col-span-2">
+              <img [src]="club.imgLink" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px] col-span-2">
+              <img src="./assets/imgs/lessons/footbol-1.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px] col-span-2">
+              <img src="./assets/imgs/lessons/footbol-2.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px]">
+              <img src="./assets/imgs/lessons/footbol-3.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px]">
+              <img src="./assets/imgs/lessons/footbol-4.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px]">
+              <img src="./assets/imgs/lessons/footbol-5.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px]">
+              <img src="./assets/imgs/lessons/footbol-6.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px]">
+              <img src="./assets/imgs/lessons/footbol-7.png" alt="" class="w-full h-full">
+            </div>
+            <div class="rounded-2xl overflow-hidden max-h-[338px]">
+              <img src="./assets/imgs/lessons/footbol-7.png" alt="" class="w-full h-full">
+            </div>
+          </div>
+
+          <div class="text-[#020A0C] text-[20px] font-[500] leading-[130%] mb-[120px]">
+            <p class="indent-5">Bolajoningiz futbolni yaxshi ko‘radimi? Unda uni bizning futbol mashg‘ulotlariga olib keling! Har bir darsda bolalar nafaqat zarba berish va to‘p nazorati kabi texnikalarni o‘rganadi, balki jamoada ishlash, fidoyilik va mas’uliyatni ham o‘zlashtiradi.</p>
+            <p>🔹 Tajribali murabbiylar, do‘stona muhit va bolalar uchun qulay yondashuv.</p>
+            <p>🔸 Mashg‘ulotlar haftaning turli kunlarida, qulay vaqtlarda o‘tkaziladi.</p>
+            <p> ✅ Sayt orqali hoziroq ro‘yxatdan o‘ting va futbolga ilk qadamni qo‘ying!</p>
+            <br>
+            <p class="indent-5"> Futbol bolalar uchun nafaqat o‘yin — bu sog‘lom turmush tarzining asosi. Bizning futbol mashg‘ulotlarimizda bolalar harakat qilishni, do‘stlar topishni va o‘ziga bo‘lgan ishonchni oshirishni o‘rganadilar.</p>
+            <p> ⚽ Darslar yosh va tayyorgarlik darajasiga mos ravishda tashkil etiladi.</p>
+            <p> 👟 O‘yin shaklida o‘rgatish metodikasi yordamida bolalar zerikmaydi!</p>
+            <p> 📅 Onlayn jadval orqali sizga qulay vaqtni tanlang — sportga ilk qadam hozirdan boshlansin!</p>
+            <br>
+            <p class="indent-5">Farzandingizni bizning futbol maktabiga olib keling — bu yerda u nafaqat futbol sir-asrorlarini o‘rganadi, balki sog‘lom, faol va ijtimoiy shaxs sifatida shakllanadi.</p>
+            <p>🧒 Guruhlar 4 yoshdan 14 yoshgacha bo‘lgan bolalar uchun.</p>
+            <p>🏆 Har bir bola — alohida e’tiborda!</p>
+            <p>🌐 Mashg‘ulotlar jadvalini saytimizdan ko‘rib, mos vaqtni tanlashingiz mumkin.</p>
+            <br>
+            <p class="indent-5">Futbol bolalarda tezkor fikrlash, koordinatsiya va kuchli xarakterni rivojlantiradi. Bizning futbol mashg‘ulotlarimiz — bu bolangiz uchun sog‘lom muhit, tajribali murabbiylar va chinakam futbol muhabbati.</p>
+            <p>🔹 Sport zalimiz va ochiq maydonlar bolalar uchun moslashtirilgan.</p>
+            <p>🔸 Mashg‘ulotlar davomida ota-onalar kuzatib borishlari mumkin.</p>
+            <p> ✅ Endi siz qulay vaqtni tanlab, birgina tugma bosish bilan ro‘yxatdan o‘ta olasiz!</p>
+          </div>
+
+
+          <div>
+            <div class="mb-[20px]">
+              <p class="text-[#020A0C] text-[40px] font-[700] font-['Lato']! leanding-[120%]">Dars jadvali</p>
+            </div>
+
+            <div class="">
+              <app-lesson-schedule></app-lesson-schedule>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-span-3 col-start-10">
+          <div class="rounded-2xl overflow-hidden w-full border border-[#EAECF2] mb-[12px]">
+            <div class="relative">
+              <img src="./assets/imgs/map.png" alt="Map" class="w-full" />
+              <button class="absolute bottom-4 left-1/2 bg-blue-600 -translate-x-1/2 rounded-xl flex items-center gap-2 py-[12px] px-[16px]">
+                <span class="icon-map-point text-[24px]"></span>
+                <p class="text-[#FFFFFF] text-[20px] font-[600] leading-[120%] text-nowrap">Xaritadan ko‘rish</p>
+              </button>
+            </div>
+            <div class="p-[16px] bg-[#fff]">
+              <p class="text-[#1C79C0] text-[18px] font-[500] leading-[130%] underline">{{club.location}}</p>
+            </div>
+          </div>
+
+          <div class="p-[16px] rounded-2xl border border-[#EAECF2] flex flex-col gap-[12px] bg-[#fff]">
+            <div class="flex items-center gap-[7px] bg-[#F6F7FB] py-[4px] px-[8px] rounded-[8px] border border-[#EAECF2]">
+              <span class="icon-city text-[22px] text-[#1C79C0]"></span>
+              <p class="text-[#393F48] text-[20px] font-[500] leading-[130%]">{{club.city}}</p>
+            </div>
+            <div class="flex items-center gap-[7px] bg-[#F6F7FB] py-[4px] px-[8px] rounded-[8px] border border-[#EAECF2]">
+              <span class="icon-phone text-[22px] text-[#1C79C0]"></span>
+              <p class="text-[#393F48] text-[20px] font-[500] leading-[130%]">{{club.phoneNumber}}</p>
+            </div>
+            <div class="flex items-center justify-center gap-[7px] py-[10px] rounded-[12px] border border-[#EAECF2]">
+              <p class="text-[#00205B] text-[24px] font-[700] font-['Lato'] leading-[120%]">{{club.price}} so`m</p>
+            </div>
+            <div class="flex items-center justify-center gap-[7px] bg-[#FE830C] py-[10px] rounded-[12px] border border-[#EAECF2] cursor-pointer">
+              <span class="icon-phone text-[22px] text-[#1C79C0]"></span>
+              <p class="text-[#fff] text-[20px] font-[500] leading-[130%]">Yozilish</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="mb-[20px]">
+          <p class="text-[#020A0C] text-[40px] font-[700] font-['Lato']! leanding-[120%]">Futbol to‘garagi</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-[12px] pb-[16px]">
+          @for(club of currentData; track club.id){
+            <app-club-block [club]="club"></app-club-block>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+}
+

@@ -1,0 +1,38 @@
+
+<div class="">
+  <h3 class="text-[40px] font-[700] font-['Lato']! leading-[120%] mb-[20px]">Yangiliklar</h3>
+
+  <div class="flex justify-between mb-[22px]">
+    <div class="w-[400px] py-[11px] px-[12px] border-[1px] border-[#DEE1EB] rounded-[12px] flex items-center gap-[12px] bg-[#fff]">
+      <span class="icon-search text-[22px] text-[#1C79C0]"></span>
+      <input type="text" class="w-full placeholder:text-[#757D8E] text-[20px] font-[500] outline-none border-none " placeholder="Izlash" (input)="onInput($event)">
+    </div>
+    <div class="">
+      <p-calendar
+      class="full-size"
+        [(ngModel)]="range"
+        selectionMode="range"
+        dateFormat="dd.mm.yy"
+        [inputStyle]="{ width: '400px', padding:'11px'}"
+        [placeholder]="'дд.мм.гггг - дд.мм.гггг'"
+        (onSelect)="onRangeSelected($event)"
+      ></p-calendar>
+
+    </div>
+  </div>
+
+  <div class="grid grid-cols-4 gap-[16px] mb-[16px]">
+    @for(data of currentData; track data.id;let i=$index){
+      @if(length > i){
+        <app-news-block [data]="data"></app-news-block>
+      }
+    }
+  </div>
+
+  @if(currentData.length >= length){
+    <button class="bg-[#1C79C01A] rounded-[12px] py-[12px] px-[16px] flex items-center gap-[6px] mx-auto cursor-pointer" (click)="moreNews()">
+      <p class="text-[20px] text-[#1C79C0] font-[600] leading-[120%]">Ko‘proq ko‘rsatish</p>
+      <span class="icon-restart text-[24px]"></span>
+    </button>
+  }
+</div>

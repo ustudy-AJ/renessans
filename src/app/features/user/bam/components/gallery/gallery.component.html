@@ -1,0 +1,28 @@
+
+
+<div class="">
+  <div class="flex justify-center">
+    <h3 class="text-[40px] font-[700] font-['Lato']! leading-[120%] mb-[20px]">O‘quvchilarning ijodiy ishlari</h3>
+  </div>
+
+  <div class="grid grid-cols-5 gap-[16px]">
+    @for(gallery of currentData;track gallery.id){
+    <div class="rounded-[16px] overflow-hidden">
+      <img [src]="gallery.imgUrl" alt="" class="w-full">
+    </div>
+    }
+  </div>
+
+  @if(rowsCount>1){
+    <div class="flex justify-center">
+      <p-paginator
+      (onPageChange)="onPageChange($event)"
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="rowsCount"
+      [showPageLinks]="false"
+      [showFirstLastIcon]="false"
+        />
+    </div>
+  }
+</div>

@@ -1,0 +1,18 @@
+::ng-deep .p-breadcrumb{
+  padding: 0 !important;
+}
+::ng-deep .p-breadcrumb-item .other-colors span{
+  color: #757D8E;
+}
+::ng-deep .p-breadcrumb-item:last-child .other-colors span{
+  color: #393F48;
+}
+
+
+.text-ellipsis{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

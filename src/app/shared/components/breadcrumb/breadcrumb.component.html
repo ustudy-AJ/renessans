@@ -1,0 +1,7 @@
+<p-breadcrumb [model]="(breadcrumbs$ | async) ?? []" [home]="{ icon: 'icon-home text-[24px]', routerLink: '/' }" >
+  <ng-template #item let-item>
+    <a [class.other-colors]="!isOneColor" [routerLink]="item.routerLink">
+      <span class="text-[20px] font-[500] leading-[150%] font-[Nunito]! text-[{{color}}] text-ellipsis">{{ item.label }}</span>
+    </a>
+  </ng-template>
+</p-breadcrumb>

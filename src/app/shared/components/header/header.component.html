@@ -1,0 +1,49 @@
+
+<div class="mx-auto">
+  <div class="bg-[#1C79C0]">
+    <app-up-header></app-up-header>
+  </div>
+  <div class="max-w-[1640px] mx-auto py-[20px] px-[20px] 2xl:px-[0px] flex justify-between items-center">
+    <div class="flex items-center gap-[16px]">
+      <span class="icon-renessans text-[80px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span>
+      <div class="">
+        <h2 class="text-[32px] font-[800] font-['Lato']! uppercase leading-[100%]" (click)="showBurgerMenu()" >RENESSANS</h2>
+        <p class="text-[13px] font-[500] font-['Lato']! uppercase">Respublika o‘quvchilar markazi</p>
+      </div>
+    </div>
+    <div class="">
+      <ul class="flex gap-[24px]">
+        <li class="xl:text-[20px] font-[500] "><a href="">Asosiy sahifa</a></li>
+        <li class="xl:text-[20px] font-[500] "><a routerLink="/bam">BAM</a></li>
+        <li class="xl:text-[20px] font-[500] "><a routerLink="/clubs">To‘garaklar</a></li>
+        <li class="xl:text-[20px] font-[500] "><a href="">Dars jadvali</a></li>
+        <li class="xl:text-[20px] font-[500] "><a href="">Kontaktlar</a></li>
+      </ul>
+    </div>
+    <div class="flex gap-[12px]">
+      <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="false" filterBy="name" [showClear]="false" placeholder="" class="rounded-[20px]">
+        <ng-template #selectedItem let-selectedOption>
+            <div class="flex items-center gap-2">
+                <img src="https://flagsapi.com/{{selectedOption.code}}/flat/64.png"  style="width: 24px; height: 20px;" />
+                <div>{{ selectedOption.name }}</div>
+            </div>
+        </ng-template>
+        <ng-template let-country #item>
+            <div class="flex items-center gap-2">
+                <img src="https://flagsapi.com/{{country.code}}/flat/64.png"  style="width: 24px; height: 20px;" />
+                <div>{{ country.name }}</div>
+            </div>
+        </ng-template>
+      </p-select>
+
+      <a href="" class="py-[12px] px-[16px] bg-[#1C79C0] rounded-[12px] flex items-center gap-[12px] text-[white]">
+        <span class="icon-user opacity-40 text-[20px]"></span>
+        <p class="text-[20px] font-[600] leading-[120%]">Kirish</p>
+        <span class="icon-arrow-right "></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+

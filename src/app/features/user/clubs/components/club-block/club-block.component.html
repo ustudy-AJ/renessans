@@ -1,0 +1,45 @@
+
+<div class="flex gap-[16px] p-[16px] bg-[#fff] border border-[#EAECF2] rounded-[16px]">
+  <div class="w-[220px] h-[220px] rounded-[16px] overflow-hidden">
+    <img [src]="club.imgLink" alt="" class="w-full h-full">
+  </div>
+  <div class="w-full">
+    <div class="flex justify-between pb-[16px]">
+      <p class="text-[28px] font-[700] font-['Lato']! leading-[120%]">{{club.title}}</p>
+      <div class="flex items-center gap-[7px] bg-[#F6F7FB] py-[4px] px-[8px] rounded-[8px] border border-[#EAECF2]">
+          <span class="icon-map-point text-[22px] text-[#1C79C0]"></span>
+          <p class="text-[#020A0C] text-[20px] font-[500] leading-[130%]">{{club.city}}</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-[12px] pb-[12px]">
+      <p class="text-[#1C79C0] text-[20px] font-[500] underline decoration-solid leading-[130%]">{{club.location}}</p>
+      <span class="icon-circle text-[6px]"></span>
+      <p class="text-[#1C79C0] text-[20px] font-[500] underline decoration-solid leading-[130%]">Xaritada ko‘rish</p>
+    </div>
+    <div class="flex items-center gap-[12px] pb-[12px]">
+      <p class="text-[#757D8E] text-[20px] font-[600] leading-[120%]">Kunduzgi smena</p>
+      <span class="icon-circle text-[6px]"></span>
+      <p class="text-[#020A0C] text-[20px] font-[600] leading-[120%]">13:00 - 15:00</p>
+    </div>
+    <div class="flex items-center gap-[12px] pb-[24px]">
+      <p class="text-[#757D8E] text-[20px] font-[600] leading-[120%]">Telefon raqam</p>
+      <span class="icon-circle text-[6px]"></span>
+      <p class="text-[#020A0C] text-[20px] font-[600] leading-[120%]">{{club.phoneNumber}}</p>
+    </div>
+    <div class="flex items-center justify-between">
+      <div class="py-[9px] px-[12px] rounded-[12px] border border-[#EAECF2]">
+        <p class="text-[#00205B] text-[24px] font-[700] font-['Lato']! leading-[120%]">{{club.price}} so‘m</p>
+      </div>
+      <div class="flex items-center gap-[12px]">
+        <button type="button" class="flex items-center gap-[6px] px-[16px] py-[12px] bg-[#F5E9DE] rounded-[12px]">
+          <span class="icon-search text-[22px] text-[#FE830C]"></span>
+          <p class="text-[#FE830C] text-[20px] font-[600] leading-[120%]">Yozilish</p>
+        </button>
+        <a [routerLink]="'/clubs/'+club.id" class="flex items-center gap-[12px] px-[16px] py-[12px] bg-[#D8E6F2] rounded-[12px]">
+          <p class="text-[#1C79C0] text-[20px] font-[600] leading-[120%]">Batafsil ma’lumot</p>
+          <span class="icon-arrow-right text-[11px] text-[#1C79C0]!"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

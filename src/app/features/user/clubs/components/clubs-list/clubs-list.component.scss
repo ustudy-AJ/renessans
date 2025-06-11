@@ -1,0 +1,50 @@
+
+:host  ::ng-deep .p-paginator .p-ripple{
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #EAECF2;
+  width: 48px;
+  height: 48px;
+
+  & span{
+    font-family: 'Nunito' !important;
+  }
+}
+
+:host ::ng-deep .p-paginator{
+  background: none;
+}
+:host ::ng-deep .p-paginator-prev{
+  background-color: #EAECF2 !important;
+}
+:host ::ng-deep .p-paginator-next{
+  background-color: #EAECF2 !important;
+}
+:host ::ng-deep .p-paginator-page-selected{
+  background-color: white;
+  color: #FE830C !important;
+}
+:host ::ng-deep .p-select{
+  width: 100%;
+}
+
+
+
+:host ::ng-deep  .custom-time-slider .p-slider-range {
+  background-color: #f59e0b !important;
+  height: 6px;
+  border-radius: 9999px;
+}
+
+:host ::ng-deep .custom-time-slider .p-slider-handle {
+  background: #f59e0b !important;
+  outline: 6px solid white;
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 20px #020a0c9a;
+  border-radius: 50%;
+
+}
+:host ::ng-deep .custom-time-slider .p-slider-handle::before {
+  content: none;
+}
