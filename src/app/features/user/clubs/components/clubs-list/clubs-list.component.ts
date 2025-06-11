@@ -39,9 +39,7 @@ export class ClubsListComponent {
     this.currentData = this.clubsList.slice(this.first, this.first + this.rows);
   }
 
-  timeRange: number[] = [540, 1200];
-  rangeValues: number[] = [20,80];
-
+  timeRange: number[] = [540, 1020];
 
   getTimeString(minutes: number): string {
     const hours = Math.floor(minutes / 60);
