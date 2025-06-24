@@ -14,29 +14,36 @@ export class BreadcrumbService {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        const breadcrumbs: MenuItem[] = [];
-        let currentRoute = this.route.root;
-        let url = '';
-
-        while (currentRoute.children.length > 0) {
-          const child = currentRoute.children[0];
-          const routeSnapshot = child.snapshot;
-
-          if (routeSnapshot.data['breadcrumb']) {
-            const path = routeSnapshot.url.map(segment => segment.path).join('/');
-            url += '/' + path;
-
-            breadcrumbs.push({
-              label: routeSnapshot.data['breadcrumb'],
-              routerLink: url
-            });
-          }
-          currentRoute = child;
-        }
-
-        this._breadcrumbs$.next(breadcrumbs);
+        this.buildBreadcrumbs();
       });
+
+    this.buildBreadcrumbs();
   }
+
+  private buildBreadcrumbs(): void {
+    const breadcrumbs: MenuItem[] = [];
+    let currentRoute = this.route.root;
+    let url = '';
+
+    while (currentRoute.children.length > 0) {
+      const child = currentRoute.children[0];
+      const routeSnapshot = child.snapshot;
+
+      if (routeSnapshot.data['breadcrumb']) {
+        const path = routeSnapshot.url.map(segment => segment.path).join('/');
+        url += '/' + path;
+
+        breadcrumbs.push({
+          label: routeSnapshot.data['breadcrumb'],
+          routerLink: url
+        });
+      }
+      currentRoute = child;
+    }
+
+    this._breadcrumbs$.next(breadcrumbs);
+  }
+
 
 
   addTitle(title: string){

@@ -2,12 +2,12 @@
 
 <div class="">
   <div class="flex justify-center">
-    <h3 class="text-[40px] font-[700] font-['Lato']! leading-[120%] mb-[20px]">O‘quvchilarning ijodiy ishlari</h3>
+    <h3 class="text-[40px] font-bold font-['Lato']! leading-[120%] mb-5">{{title}}</h3>
   </div>
 
-  <div class="grid grid-cols-5 gap-[16px]">
+  <div class="grid grid-cols-5 gap-4">
     @for(gallery of currentData;track gallery.id){
-    <div class="rounded-[16px] overflow-hidden">
+    <div class="rounded-2xl overflow-hidden">
       <img [src]="gallery.imgUrl" alt="" class="w-full">
     </div>
     }

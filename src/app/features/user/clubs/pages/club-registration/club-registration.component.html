@@ -1,0 +1,134 @@
+
+<div class="bg-black-8">
+  <div class="max-w-[1640px] mx-auto pt-20 pb-[120px]">
+    <div class="mb-4">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+    @if(club){
+      <div class="grid grid-cols-10 gap-4" >
+        <div class="col-span-8 col-start-1 p-4 bg-white rounded-2xl border border-black-7">
+          <p class="text-black-1 text-[28px] font-bold font-['Lato']! leading-[120%] mb-4">To‘garakka yozilish</p>
+          <p class="text-blue-1 text-2xl font-semibold font-['Lato']! leading-[120%] mb-3">Asosiy ma’lumotlar</p>
+
+          <form [formGroup]="registrForm">
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-black-2 text-xl font-medium leading-[130%]" class="text-black-2 text-xl font-medium leading-[130%]">Ism:</label>
+                <input type="text" formControlName="firstName" placeholder="Kiriting" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-black-2 text-xl font-medium leading-[130%]">Familiya:</label>
+                <input type="text" formControlName="lastName" placeholder="Kiriting" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-black-2 text-xl font-medium leading-[130%]">Sharif:</label>
+                <input type="text" formControlName="middleName" placeholder="Kiriting" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]" />
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-black-2 text-xl font-medium leading-[130%]">PINFL:</label>
+                <input type="text" formControlName="pinfl" placeholder="Kiriting" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-black-2 text-xl font-medium leading-[130%]">Telefon nomer:</label>
+                <input type="text" formControlName="phoneNumber" placeholder="Kiriting" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div>
+                <p class="text-blue-1 text-2xl font-semibold font-['Lato']! leading-[120%] mb-3">Guruhni tanlang</p>
+                <div class="flex flex-col gap-2">
+                  <label for="" class="text-black-2 text-xl font-medium leading-[130%]">PINFL:</label>
+                  <select name="" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]">
+                    <option value="" disabled selected>Tanlang</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <p class="text-blue-1 text-2xl font-semibold font-['Lato']! leading-[120%] mb-3">Farzand tanlang</p>
+                <div class="flex flex-col gap-2">
+                  <label for="" class="text-black-2 text-xl font-medium leading-[130%]">Farzand:</label>
+                  <select name="" class="w-full py-[11px] px-3 border border-black-7 rounded-xl bg-black-8 text-black-3 text-xl leading-[120%]">
+                    <option value="" disabled selected>Tanlang</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <p class="text-blue-1 text-2xl font-semibold font-['Lato']! leading-[120%] mb-3">Smenani tanlang</p>
+              <div class="grid grid-cols-4 gap-4 mb-5">
+                @for(lessonDate of club.lessonDates; track lessonDate.id){
+                  <button type="button" class="flex items-center gap-3 p-3 border border-black-7 rounded-xl bg-white text-left cursor-pointer" [ngClass]="{ 'shadow-[0_0_0_2px_#1C79C033]': lessonDate.id == activeLessonsDate, 'border-blue-2!': lessonDate.id == activeLessonsDate}">
+                    @if(lessonDate.id == activeLessonsDate) {
+                      <div class="">
+                        <span class="icon-check text-blue-2 text-xl"></span>
+                      </div>
+                    }@else{
+                      <div class="w-[20px] h-[20px] rounded-full border-[2px] border-black-4 flex items-center justify-center">
+
+                      </div>
+                    }
+                    <div>
+                      <p class="text-black-3 text-lg font-medium leading-[130%] mb-[6px]">Kunduzgi smena:</p>
+                      <p class="text-black-1 text-xl font-semibold font-['Lato'] leading-[120%]">{{ lessonDate.times[0] | date:"HH:mm"}} - {{ lessonDate.times[1] | date:"HH:mm"}}</p>
+                    </div>
+                  </button>
+                }
+              </div>
+            </div>
+            <div class="">
+              <p class="text-blue-1 text-2xl font-semibold font-['Lato']! leading-[120%] mb-3">Smenani tanlang</p>
+              <div class="grid grid-cols-4 gap-4 mb-5">
+                @for(lessonDate of club.lessonDates; track lessonDate.id){
+                  <button type="button" class="flex items-center gap-3 h-[75px] p-3 border border-black-7 rounded-xl bg-white text-left cursor-pointer" >
+                      <div class="w-[20px] h-[20px] rounded-full border-[2px] border-black-4 flex items-center justify-center">
+
+                      </div>
+
+                    <div>
+                      <p class="text-black-1 text-xl font-semibold font-['Lato'] leading-[120%]">Naqd to‘lov</p>
+                    </div>
+                  </button>
+                }
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-span-2 col-start-9 ">
+          <div class="rounded-2xl overflow-hidden w-full flex flex-col items-start border border-black-7 mb-3 rounded-2xl p-4 bg-white">
+            <div class="flex flex-col justify-between pb-4 gap-3">
+              <p class="text-[28px] font-bold font-['Lato']! leading-[120%] truncate">{{ club.title }}</p>
+              <div class="flex items-center gap-[7px] bg-black-8 py-1 px-2 rounded-lg border border-black-7">
+                <span class="icon-city text-[22px] text-blue-2"></span>
+                <p class="text-black-1 text-xl font-medium leading-[130%]">{{ club.city }}</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2 pb-3">
+              <p class="text-blue-2 text-xl font-medium underline decoration-solid leading-[130%]">{{ club.location }}</p>
+            </div>
+
+            <div class="flex flex-col gap-0.5">
+              <p class="text-black-3 text-xl font-semibold leading-[120%]">Telefon raqam</p>
+              <p class="text-black-1 text-xl font-semibold leading-[120%]">{{ club.phoneNumber }}</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden w-full flex flex-col items-start border border-black-7 mb-3 rounded-2xl p-4 bg-white">
+            <div class="flex flex-col gap-0.5 mb-4">
+              <p class="text-black-3 text-xl font-semibold leading-[120%]">To‘lov summasi:</p>
+              <p class="text-blue-1 text-2xl font-bold leading-[120%]">{{ club.price | currency:' ':'symbol':'1.0-2' }} so`m</p>
+            </div>
+            <button class="w-full flex items-center justify-center gap-[7px] bg-yellow-1 py-[10px] rounded-xl border border-black-7 cursor-pointer">
+              <p class="text-white text-xl font-semibold leading-[120%]">To‘lovga o‘tish</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

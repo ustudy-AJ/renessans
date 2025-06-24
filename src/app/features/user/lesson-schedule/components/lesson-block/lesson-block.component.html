@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<div class="flex gap-4 p-4 bg-white border border-black-7 rounded-2xl cursor-pointer" [ngClass]="{ 'border-blue-2': isSelected }">
+  <div class="min-w-[467px]">
+    <div class="flex justify-between gap-4 pb-4">
+      <p class="text-2xl font-bold font-['Lato']! leading-[120%] text-nowrap truncate">{{ club.title }}</p>
+      <div class="flex items-center gap-[7px] bg-black-8 py-1 px-2 rounded-lg border border-black-7">
+        <span class="icon-city text-xl text-blue-2"></span>
+        <p class="text-black-1 text-lg font-medium leading-[130%] text-nowrap">{{ club.city }}</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3 pb-3">
+      <p class="text-blue-2 text-lg font-medium underline decoration-solid leading-[130%]">{{ club.location }}</p>
+    </div>
+
+    <div class="flex items-center gap-3 pb-3">
+      <p class="text-black-3 text-lg font-semibold leading-[120%]">{{ 'clubs.shift.daytime' | transloco}}</p>
+      <span class="icon-circle text-black-5 text-[6px]"></span>
+      <p class="text-black-1 text-lg font-semibold leading-[120%]">{{club.startTime | date:"HH:mm"}} - {{club.endTime | date:"HH:mm"}}</p>
+    </div>
+
+    <div class="flex items-center gap-3 pb-[24px]">
+      <p class="text-black-3 text-lg font-semibold leading-[120%]">{{ 'clubs.phone-number' | transloco}}</p>
+      <span class="icon-circle text-black-5 text-[6px]"></span>
+      <p class="text-black-1 text-lg font-semibold leading-[120%]">{{ club.phoneNumber }}</p>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a [routerLink]="'/clubs/' + club.id" class="flex items-center gap-3 px-4 py-3 bg-statistics-1 rounded-xl">
+        <p class="text-blue-2 text-xl font-semibold leading-[120%]">{{ 'clubs.learn-more' | transloco}}</p>
+        <span class="icon-arrow-right text-[11px] text-blue-2!"></span>
+      </a>
+      <a [routerLink]="'/clubs/registration/' + club.id" class="flex items-center gap-1.5 px-4 py-3 bg-statistics-2 rounded-xl">
+        <span class="icon-search text-[22px] text-yellow-1"></span>
+        <p class="text-yellow-1 text-xl font-semibold leading-[120%]">{{ 'clubs.register' | transloco}}</p>
+      </a>
+    </div>
+  </div>
+</div>

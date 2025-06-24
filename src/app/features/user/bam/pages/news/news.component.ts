@@ -8,10 +8,11 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { filter } from 'rxjs';
 import { BreadcrumbService } from '../../../../../shared/components/breadcrumb/breadcrumb.service';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-news',
-  imports: [BreadcrumbComponent, NewsBlockComponent , DatePipe],
+  imports: [BreadcrumbComponent, NewsBlockComponent , DatePipe, TranslocoPipe],
   templateUrl: './news.component.html',
   styleUrl: './news.component.scss'
 })

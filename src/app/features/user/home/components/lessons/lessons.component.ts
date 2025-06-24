@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { IHomeStatistic } from '../../../../../shared/models/statistic.model';
-import { ILessons } from '../../../../../shared/models/lessons.model';
+import { IClubs } from '../../../../../shared/models/clubs.model';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-lessons',
-  imports: [],
+  imports: [TranslocoPipe],
   templateUrl: './lessons.component.html',
   styleUrl: './lessons.component.scss'
 })
 export class LessonsComponent {
-  @Input() data!: ILessons;
+  @Input() data!: IClubs;
 }

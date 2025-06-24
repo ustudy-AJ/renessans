@@ -1,0 +1,11 @@
+
+
+<app-full-breadcrumb></app-full-breadcrumb>
+
+<div class="bg-black-8">
+  <div class="max-w-[1640px] mx-auto pt-20 pb-[120px] grid grid-cols-4 gap-4">
+    @for(category of contactCategories; track category.id) {
+      <app-contact-category-block [category]="category"></app-contact-category-block>
+    }
+  </div>
+</div>

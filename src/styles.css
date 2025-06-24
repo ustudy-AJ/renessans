@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+*{
+  font-family: "Nunito", sans-serif;
+}
+span, i{
+  font-family: 'icomoon' ;
+}
+
+.p-breadcrumb{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+
+input, textarea, select{
+  outline: none;
+}
+
+@theme {
+  --color-blue-1: #00205B;
+  --color-blue-2: #1C79C0;
+  --color-blue-3: #68BEFF;
+  --color-blue-4: #0DD3FF;
+
+  --color-yellow-1: #FE830C;
+  --color-yellow-2: #FBB03B;
+
+  --color-statistics-1: #D8E6F2;
+  --color-statistics-2: #F5E9DE;
+  --color-statistics-3: #DBEFF4;
+  --color-statistics-4: #E6ECF9;
+
+
+  --color-black-1: #020A0C;
+  --color-black-2: #393F48;
+  --color-black-3: #757D8E;
+  --color-black-4: #B7BBCB;
+  --color-black-5: #BFC3D7;
+  --color-black-6: #DEE1EB;
+  --color-black-7: #EAECF2;
+  --color-black-8: #F6F7FB;
+}

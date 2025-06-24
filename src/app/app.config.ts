@@ -9,19 +9,22 @@ import { provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 
+
+
+
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),provideAnimationsAsync(),
         providePrimeNG({
-            theme: {
-              preset: Aura,
-              options: {
-                darkModeSelector: '.my-app-dark'
-              }
+          theme: {
+            preset: Aura,
+            options: {
+              darkModeSelector: '.my-app-dark'
             }
+          }
         }), provideHttpClient(), provideTransloco({
         config: {
           availableLangs: ['en', 'ru', 'uz'],
-          defaultLang: 'en',
+          defaultLang: 'uz',
           reRenderOnLangChange: true,
           prodMode: !isDevMode(),
         },

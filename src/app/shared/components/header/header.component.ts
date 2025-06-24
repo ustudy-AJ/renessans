@@ -1,35 +1,34 @@
 import { Component, inject } from '@angular/core';
 import { UpHeaderComponent } from './up-header/up-header.component';
-import { SelectModule } from 'primeng/select';
+import { SelectChangeEvent, SelectModule } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import { BurgerMenuService } from './burger-menu/burger.service';
 import { RouterLink } from '@angular/router';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [UpHeaderComponent, FormsModule, SelectModule, ButtonModule, RouterLink],
+  imports: [UpHeaderComponent, FormsModule, SelectModule, ButtonModule, RouterLink, UpperCasePipe, TranslocoPipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  private _burgerMenuService = inject(BurgerMenuService);
-  countries: any[] | undefined;
+  languages: any[] | undefined;
 
-  selectedCountry: any | undefined = { name: 'O`z', code: 'UZ' };
+  selectedLanguage: any | undefined = { name: 'O`z', code: 'uz' };
+
+  private readonly translocoService: TranslocoService = inject(TranslocoService)
 
   ngOnInit() {
-      this.countries = [
-          { name: 'O`z', code: 'UZ' },
-          { name: 'Рус', code: 'RU' },
-          { name: 'Eng', code: 'US' },
+      this.languages = [
+          { name: 'O`z', code: 'uz' },
+          { name: 'Рус', code: 'ru' },
+          { name: 'Eng', code: 'us' },
       ];
   }
 
-  showBurgerMenu(){
-    console.log("dsdsf");
-
-
-    this._burgerMenuService.toInversion();
+  onLanguageChange(event: SelectChangeEvent) {
+    this.translocoService.setActiveLang(event.value.code != 'us' ? event.value.code : "en");
   }
 }

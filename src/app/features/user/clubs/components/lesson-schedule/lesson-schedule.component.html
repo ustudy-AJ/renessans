@@ -1,25 +1,17 @@
 
 <div class="">
-  <div class="flex items-center gap-[16px] mb-[20px]">
-    <div class="w-[220px] p-[16px] border border-[#1C79C0] rounded-[12px] bg-[#fff] shadow-[0_0_0_2px_#1C79C033]">
-      <p class="text-[#757D8E] text-[20px] font-[500] leading-[130%] mb-[6px]">Kunduzgi smena:</p>
-      <p class="text-[#1C79C0] text-[24px] font-[700] font-['Lato'] leading-[120%]">09:00 - 12:00</p>
-    </div>
-    <div class="w-[220px] p-[16px] border border-[#EAECF2] rounded-[12px] bg-[#fff]">
-      <p class="text-[#757D8E] text-[20px] font-[500] leading-[130%] mb-[6px]">Kunduzgi smena:</p>
-      <p class="text-[#020A0C] text-[24px] font-[700] font-['Lato'] leading-[120%]">13:00 - 15:00</p>
-    </div>
-    <div class="w-[220px] p-[16px] border border-[#EAECF2] rounded-[12px] bg-[#fff]">
-      <p class="text-[#757D8E] text-[20px] font-[500] leading-[130%] mb-[6px]">Kunduzgi smena:</p>
-      <p class="text-[#020A0C] text-[24px] font-[700] font-['Lato'] leading-[120%]">15:00 - 18:00</p>
-    </div>
-    <div class="w-[220px] p-[16px] border border-[#EAECF2] rounded-[12px] bg-[#fff]">
-      <p class="text-[#757D8E] text-[20px] font-[500] leading-[130%] mb-[6px]">Kunduzgi smena:</p>
-      <p class="text-[#020A0C] text-[24px] font-[700] font-['Lato'] leading-[120%]">18:00 - 21:00</p>
-    </div>
+  <div class="flex items-center gap-4 mb-5">
+    @for(lessonDate of club.lessonDates; track lessonDate.id){
+      <button type="button" (click)="changeDays(lessonDate.id)" class="w-[220px] p-4 border border-black-7 rounded-xl bg-white text-left cursor-pointer" [ngClass]="{ 'shadow-[0_0_0_2px_#1C79C033]': lessonDate.id == activeLessonsDate, 'border-blue-2!': lessonDate.id == activeLessonsDate}">
+        <p class="text-black-3 text-xl font-medium leading-[130%] mb-[6px]">{{ 'clubs.shift.daytime' | transloco}}:</p>
+        <p class="text-black-1 text-2xl font-bold font-['Lato'] leading-[120%]" [ngClass]="{'text-blue-2': lessonDate.id == activeLessonsDate}">{{ lessonDate.times[0] | date:"HH:mm"}} - {{ lessonDate.times[1] | date:"HH:mm"}}</p>
+      </button>
+    }
+
   </div>
   <div class="">
-    <full-calendar [options]="calendarOptions"></full-calendar>
-
+    @if(calendarIsLoaded) {
+      <full-calendar [options]="calendarOptions" [deepChangeDetection]="true"></full-calendar>
+    }
   </div>
 </div>

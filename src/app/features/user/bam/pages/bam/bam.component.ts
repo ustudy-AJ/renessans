@@ -6,10 +6,11 @@ import { GalleryComponent } from '../../components/gallery/gallery.component';
 import { IGallery } from '../../../../../shared/models/gallery.model';
 import { GalleryData, StudentWorksData } from '../../../../../shared/mock/gallery.mock';
 import { NewsLsitComponent } from '../../components/news/news-list.component';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-bam',
-  imports: [FullBreadcrumbComponent, NewsLsitComponent, GalleryComponent],
+  imports: [FullBreadcrumbComponent, NewsLsitComponent, GalleryComponent, TranslocoPipe],
   templateUrl: './bam.component.html',
   styleUrl: './bam.component.scss'
 })

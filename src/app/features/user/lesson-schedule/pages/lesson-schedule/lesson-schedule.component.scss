@@ -1,0 +1,34 @@
+:host ::ng-deep .p-select {
+  border-radius: 12px;
+  align-items: center;
+
+  & span{
+    font-family: 'Nunito', sans-serif !important;
+  }
+
+}
+:host ::ng-deep .p-select .p-select-dropdown {
+  width: auto;
+  padding-right: 12px;
+}
+:host ::ng-deep .p-select .p-select-open {
+  border: 1px solid #1C79C0 !important;
+}
+:host ::ng-deep .p-select .p-focus {
+  border: 1px solid #1C79C0 !important;
+}
+:host ::ng-deep .p-select .p-select-option-selected {
+  background: #d1e2fa !important;
+  color: #1C79C0 !important;
+}
+
+
+
+
+::ng-deep .full-size input {
+  font-family: Nunito;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  border-radius: 12px;
+}

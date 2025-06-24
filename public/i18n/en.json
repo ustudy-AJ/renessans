@@ -1,0 +1,107 @@
+{
+  "nav-bar": {
+    "menu": {
+      "main": "Main",
+      "bam": "BAM",
+      "clubs": "Clubs",
+      "schedule": "Lesson schedule",
+      "contact": "Contacts"
+    },
+    "enter": "Enter"
+  },
+
+  "main": {
+    "title": "Learn anytime and anywhere. Build your own future.",
+    "subTitle": "\"Knowledge opens the way, and we are the door. Let your journey towards your dreams begin with us. Ready to learn? Your future starts here!\"",
+    "search-text": "Search courses",
+    "statistic": {
+      "bams": "Total number of BAMs",
+      "bams-people": "Number of children involved in BAM",
+      "bams-club": "Number of clubs in BAM",
+      "bams-employees": "Total number of employees in BAM"
+    },
+    "lesson": {
+      "title": "Clubs",
+      "all-lessons": "All clubs",
+      "club-text": "clubs"
+    }
+  },
+
+  "bam": {
+    "news": {
+      "title": "News",
+      "more-view": "Show more",
+      "search-text": "Search"
+    },
+    "creative-work": "Students' creative works",
+    "photo-gallery": "Photo gallery",
+    "similar-news": "Similar news"
+  },
+
+  "clubs": {
+    "search-text": "Search",
+    "toggle-text": "toggle",
+    "shift": {
+      "daytime": "Day shift",
+      "evening": "Evening shift"
+    },
+    "phone-number": "Phone number",
+    "register": "Register",
+    "learn-more": "Learn more",
+    "view-on-map": "View on map",
+    "lesson-schedule": "Lesson schedule",
+    "other-lessons": "Other clubs",
+
+    "filter": {
+      "filter": "Filter",
+      "clubs": "Clubs",
+      "type-of-club": "Type of club",
+      "location": "Location",
+      "select-region": "Select region",
+      "shift-text": "Shift",
+      "time-interval": "Time interval",
+      "reset-filter": "Reset filters"
+    }
+  },
+
+  "lesson-schedule": {
+    "place-holders": {
+      "search": "Search",
+      "category": "Category",
+      "type-of-club": "Type of club",
+      "region": "Region",
+      "type-of-school": "Type of school",
+      "district": "District",
+      "month": "Month"
+    },
+    "has-clubs": "Available clubs"
+  },
+
+  "contact": {
+    "bams": "BAMs",
+    "clubs": "Clubs",
+    "clubs-members": "Club members",
+    "employees": "Employees",
+    "all-bams": "All BAMs"
+  },
+
+  "footer": {
+    "departments": "Departments",
+    "contact": "Contact",
+    "copyright": "© 2024. All rights reserved",
+    "cookie-policy": "Cookie Policy",
+    "security-policy": "Security Policy",
+    "terms-of-use": "Terms of Use",
+    "user-guide": "Website User Guide"
+  },
+
+  "week": {
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "Sun": "Sun"
+  }
+}

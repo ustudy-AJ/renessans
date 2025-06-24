@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3e86qj');
-  src:  url('fonts/icomoon.eot?3e86qj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3e86qj') format('truetype'),
-    url('fonts/icomoon.woff?3e86qj') format('woff'),
-    url('fonts/icomoon.svg?3e86qj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?59rp0j');
+  src:  url('fonts/icomoon.eot?59rp0j#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?59rp0j') format('truetype'),
+    url('fonts/icomoon.woff?59rp0j') format('woff'),
+    url('fonts/icomoon.svg?59rp0j#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,47 +25,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-users-group-border:before {
+  content: "\e941";
+}
+.icon-academic-cap-border:before {
+  content: "\e942";
+}
+.icon-backpack-border:before {
+  content: "\e940";
+}
+.icon-check:before {
+  content: "\e93f";
+}
 .icon-city:before {
   content: "\e93a";
 }
 .icon-map-point:before {
   content: "\e93b";
-  color: #68beff;
 }
 .icon-circle:before {
   content: "\e93c";
-  color: #bfc3d7;
 }
 .icon-grid-1:before {
   content: "\e93d";
-  color: #1c79c0;
 }
 .icon-grid-4:before {
   content: "\e93e";
-  color: #b7bbcb;
 }
 .icon-45-line:before {
   content: "\e939";
-  color: #1c79c0;
 }
 .icon-calendar:before {
   content: "\e936";
 }
 .icon-restart:before {
   content: "\e937";
-  color: #1c79c0;
 }
 .icon-home:before {
   content: "\e938";
-  color: #0dd3ff;
 }
 .icon-phone:before {
   content: "\e934";
-  color: #0dd3ff;
 }
 .icon-location:before {
   content: "\e935";
-  color: #0dd3ff;
 }
 .icon-search:before {
   content: "\e900";
@@ -225,7 +228,6 @@
 }
 .icon-map:before {
   content: "\e932";
-  color: #0dd3ff;
 }
 .icon-renessans .path1:before {
   content: "\e901";
@@ -278,40 +280,31 @@
 }
 .icon-email:before {
   content: "\e90a";
-  color: #0dd3ff;
 }
 .icon-arrow-right:before {
   content: "\e90b";
 }
 .icon-user:before {
   content: "\e90c";
-  color: #fff;
 }
 .icon-facebook:before {
   content: "\e90d";
-  color: #fff;
 }
 .icon-instagram:before {
   content: "\e90e";
-  color: #fff;
 }
 .icon-telegram:before {
   content: "\e90f";
-  color: #fff;
 }
 .icon-youtube:before {
   content: "\e910";
-  color: #fff;
 }
 .icon-volume:before {
   content: "\e911";
-  color: #fff;
 }
 .icon-telephone:before {
   content: "\e912";
-  color: #fff;
 }
 .icon-view:before {
   content: "\e913";
-  color: #fff;
 }

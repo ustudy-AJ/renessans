@@ -1,0 +1,44 @@
+<div class="bg-white rounded-2xl p-5 border border-black-7">
+  <h2 class="text-black-1 text-2xl font-bold font-['Lato']! leading-[120%] mb-3">{{category.name}}</h2>
+
+  <div class="flex flex-col items-start gap-1.5">
+    <div class="flex flex-col gap-1.5 mb-4.5 w-full">
+      <div class="flex items-center gap-2 bg-black-8 rounded-xl px-2 py-1.5">
+        <span class="icon-city text-blue-2 text-[22px]"></span>
+        <p class="text-black-3 text-lg font-normal leading-[130%]">{{ 'contact.bams' | transloco}}</p>
+        <span class="flex-1 border-t border-dashed border-black-5 mx-2"></span>
+        <p class="text-[#0A2240] text-lg font-medium leading-[130%]">{{category.bams}}</p>
+      </div>
+      <div class="flex items-center gap-2 bg-black-8 rounded-xl px-2 py-1.5">
+        <span class="icon-backpack-border text-blue-2 text-[22px] fill-none!"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+        <p class="text-black-3 text-lg font-normal leading-[130%]">{{ 'contact.clubs' | transloco}}</p>
+        <span class="flex-1 border-t border-dashed border-black-5 mx-2"></span>
+        <p class="text-[#0A2240] text-lg font-medium leading-[130%]">{{category.clubs}}</p>
+      </div>
+      <div class="flex items-center gap-2 bg-black-8 rounded-xl px-2 py-1.5">
+        <span class="icon-academic-cap-border text-blue-2 text-[22px]"></span>
+        <p class="text-black-3 text-lg font-normal leading-[130%]">{{ 'contact.clubs-members' | transloco}}</p>
+        <span class="flex-1 border-t border-dashed border-black-5 mx-2"></span>
+        <p class="text-[#0A2240] text-lg font-medium leading-[130%]">{{category.clubsPeople}}</p>
+      </div>
+      <div class="flex items-center gap-2 bg-black-8 rounded-xl px-2 py-1.5">
+        <span class="icon-users-group-border text-blue-2 text-[22px]"></span>
+        <p class="text-black-3 text-lg font-normal leading-[130%]">{{ 'contact.employees' | transloco}}</p>
+        <span class="flex-1 border-t border-dashed border-black-5 mx-2"></span>
+        <p class="text-[#0A2240] text-lg font-medium leading-[130%]">{{category.employees}}</p>
+      </div>
+    </div>
+
+    @if(category.currentCategories) {
+      <a [routerLink]="'/contacts/' + category.id" class="flex items-center gap-3 bg-statistics-1 rounded-xl px-4 py-3 hover:bg-[#d2eaff] transition-colors">
+        <p class="text-blue-2 text-xl font-semibold leading-[120%]">{{ 'contact.all-bams' | transloco}}</p>
+        <span class="icon-arrow-right text-blue-2 text-sm"></span>
+      </a>
+    }@else{
+      <a [routerLink]="'/contacts/' + category.id + '/' + category.contact?.id" class="flex items-center gap-3 bg-statistics-1 rounded-xl px-4 py-3 hover:bg-[#d2eaff] transition-colors">
+        <p class="text-blue-2 text-xl font-semibold leading-[120%]">{{ 'contact.all-bams' | transloco}}</p>
+        <span class="icon-arrow-right text-blue-2 text-sm"></span>
+      </a>
+    }
+  </div>
+</div>

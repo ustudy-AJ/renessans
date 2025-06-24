@@ -9,5 +9,4 @@ import { ClubsListComponent } from '../../components/clubs-list/clubs-list.compo
   styleUrl: './clubs.component.scss'
 })
 export default class ClubsComponent {
-
 }

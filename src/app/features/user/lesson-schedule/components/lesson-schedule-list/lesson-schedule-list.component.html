@@ -1,0 +1,19 @@
+
+
+<div class="">
+  <div class="flex items-center gap-2.5 mb-3">
+    <p class="text-[28px] font-bold font-['Lato']! leading-[120%]">{{ 'lesson-schedule.has-clubs' | transloco }}</p>
+    <p class="text-yellow-1 text-2xl font-bold font-['Lato']! leading-[120%]">{{clubs.length}}</p>
+  </div>
+  <div class="flex gap-4 overflow-hidden mb-5">
+    @for(club of clubs; track club.id; let i = $index) {
+      <div class="" (click)="selectLesson(club.id)">
+        <app-lesson-block [club]="club" [isSelected]="club.id == selectedLesson.id"></app-lesson-block>
+      </div>
+    }
+  </div>
+
+  <div class="">
+    <app-lesson-schedule [club]="selectedLesson"></app-lesson-schedule>
+  </div>
+</div>

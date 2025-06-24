@@ -1,17 +1,17 @@
 
 
-<div class="pt-[50px] flex justify-center">
-  <div class="max-w-[850px] flex flex-col items-center gap-[8px] relative">
-    <div class="px-[12px] py-[10px] bg-[#F6F7FB] rounded-[12px] flex items-center gap-[6px]">
-      <span class="icon-star text-[24px]"><span class="path1"></span><span class="path2"></span></span>
-      <p class="text-[#00205B] font-[500] md:text-[18px] uppercase">RENESSANS RESPUBLIKA O’QUVCHILAR MARKAZI</p>
+<div class="pt-[50px] flex justify-center ">
+  <div class="max-w-[850px] flex flex-col items-center gap-2 relative">
+    <div class="px-3 py-[10px] bg-black-8 rounded-xl flex items-center gap-1.5">
+      <span class="icon-star text-2xl"><span class="path1"></span><span class="path2"></span></span>
+      <p class="text-blue-1 font-medium md:text-lg uppercase">RENESSANS RESPUBLIKA O’QUVCHILAR MARKAZI</p>
     </div>
-    <h3 class="text-[#020A0C] font-[700] text-[37px] md:text-[50px] text-center font-['Lato']! mb-[8px]">Istalgan joyda va vaqtda o'rganing Kelajagingizni o‘zingiz quring</h3>
-    <p class="text-[#757D8E] font-[500] md:text-[20px] text-center mb-[12px]">"Bilim yo‘l ochadi, biz esa eshikmiz. Orzular sari yurishda ilk qadam biz bilan boshlansin. O‘rganishga tayyormisiz? Kelajagingiz shu yerdan boshlanadi!"</p>
+    <h3 class="text-black-1 font-bold text-[37px] md:text-[50px] text-center font-['Lato']! mb-[8px]">{{ 'main.title' | transloco }}</h3>
+    <p class="text-black-3 font-medium md:text-xl text-center mb-3">{{ 'main.subTitle' | transloco }}</p>
 
-    <div class="w-[500px] py-[15px] px-[16px] border-[1px] border-[#DEE1EB] rounded-[12px] flex items-center gap-[12px] bg-[#fff]">
-      <span class="icon-search text-[20px] text-[#1C79C0]"></span>
-      <input type="text" class="w-full placeholder:text-[#757D8E] text-[20px] font-[500] outline-none border-none " placeholder="Kurslarni izlash">
+    <div class="w-[500px] py-[15px] px-4 border-[1px] border-black-6 rounded-xl flex items-center gap-3 bg-white">
+      <span class="icon-search text-xl text-blue-2"></span>
+      <input type="text" class="w-full placeholder:text-black-3 text-xl font-medium outline-none border-none " placeholder="{{ 'main.search-text' | transloco }}">
     </div>
 
     <img ngSrc="./assets/imgs/school-boy.png" alt="" width="859" height="357" priority>

@@ -10,6 +10,7 @@ import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 })
 export class GalleryComponent {
   @Input() data!: IGallery[];
+  @Input() title!: string;
 
   currentData!: IGallery[]
 

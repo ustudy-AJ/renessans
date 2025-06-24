@@ -1,0 +1,107 @@
+{
+  "nav-bar": {
+    "menu": {
+      "main": "Asosiy sahifa",
+      "bam": "BAM",
+      "clubs": "To‘garaklar",
+      "schedule": "Dars jadvali",
+      "contact": "Kontaktlar"
+    },
+    "enter": "Kirish"
+  },
+
+  "main": {
+    "title": "Istalgan joyda va vaqtda o'rganing Kelajagingizni o‘zingiz quring",
+    "subTitle": "\"Bilim yo‘l ochadi, biz esa eshikmiz. Orzular sari yurishda ilk qadam biz bilan boshlansin. O‘rganishga tayyormisiz? Kelajagingiz shu yerdan boshlanadi!\"",
+    "search-text": "Kurslarni izlash",
+    "statistic": {
+      "bams": "BAM umumiy soni",
+      "bams-people": "BAMdagi jalb qilingan bolalar soni",
+      "bams-club": "BAMdagi jalb qilingan bolalar soni",
+      "bams-employees": "BAMdagi umumiy xodimlar soni"
+    },
+    "lesson": {
+      "title": "To‘garaklar",
+      "all-lessons": "Barcha to'garaklar",
+      "club-text": "to'garaklar"
+    }
+  },
+
+  "bam": {
+    "news": {
+      "title": "Yangiliklar",
+      "more-view": "Ko‘proq ko‘rsatish",
+      "search-text": "Izlash"
+    },
+    "creative-work": "O‘quvchilarning ijodiy ishlari",
+    "photo-gallery": "Fotogalareya",
+    "similar-news": "O‘xshash yangiliklar"
+  },
+
+  "clubs": {
+    "search-text": "Izlash",
+    "toggle-text": "talik",
+    "shift": {
+      "daytime": "Kunduzgi smena",
+      "evening": "Kechki smena"
+    },
+    "phone-number": "Telefon raqam",
+    "register": "Yozilish",
+    "learn-more": "Batafsil ma’lumot",
+    "view-on-map": "Xaritadan ko‘rish",
+    "lesson-schedule": "Dars jadvali",
+    "other-lessons": "Boshqa to‘garaklar",
+
+    "filter": {
+      "filter": "Filter",
+      "clubs": "To‘garaklar",
+      "type-of-club": "To‘garak turi",
+      "location": "Joylashuv",
+      "select-region": "Viloyatni tanlang",
+      "shift-text": "Smena",
+      "time-interval": "Vaqt intervali",
+      "reset-filter": "Filterlarni tozalash"
+    }
+  },
+
+  "lesson-schedule": {
+    "place-holders": {
+      "search": "Izlash",
+      "category": "Kategoriya",
+      "type-of-club": "To‘garak turi",
+      "region": "Viloyat",
+      "type-of-school": "Maktab turi",
+      "district": "Tuman",
+      "month": "Oy"
+    },
+    "has-clubs": "Mavjud to‘garaklar"
+  },
+
+  "contact": {
+    "bams": "BAMlar",
+    "clubs": "To‘garaklar",
+    "clubs-members": "To‘garaklar a’zolari",
+    "employees": "Xodimlar",
+    "all-bams": "Barcha BAMlar"
+  },
+
+  "footer": {
+    "departments": "Bo‘limlar",
+    "contact": "Aloqa",
+    "copyright": "© 2024. Barcha huquqlar ximoyalangan",
+    "cookie-policy": "Cookie siyosati",
+    "security-policy": "Xavfsizlik siyosati",
+    "terms-of-use": "Foydalanish shartlari",
+    "user-guide": "Veb saytdan foydalanish bo’yicha qo’llanma"
+  },
+
+  "week": {
+    "Mon": "Dush",
+    "Tue": "Sesh",
+    "Wed": "Chor",
+    "Thu": "Pay",
+    "Fri": "Jum",
+    "Sat": "Shan",
+    "Sun": "Yak"
+  }
+}

@@ -2,17 +2,17 @@
 
 
 @if(club){
-  <div class="bg-[#F6F7FB]">
-    <div class="max-w-[1400px] mx-auto pt-[80px] pb-[120px] ">
-      <div class="mb-[16px]">
+  <div class="bg-black-8">
+    <div class="max-w-[1400px] mx-auto pt-20 pb-[120px] ">
+      <div class="mb-4">
         <app-breadcrumb></app-breadcrumb>
       </div>
-      <div class="mb-[20px]">
-        <p class="text-[#020A0C] text-[40px] font-[700] font-['Lato']! leanding-[120%]">Futbol to‘garagi</p>
+      <div class="mb-5">
+        <p class="text-black-1 text-[40px] font-bold font-['Lato']! leanding-[120%]">Futbol to‘garagi</p>
       </div>
-      <div class="grid grid-cols-12 gap-[16px]">
+      <div class="grid grid-cols-12 gap-4">
         <div class="col-span-9 col-start-1">
-          <div class="grid grid-cols-6 gap-[16px] mb-[16px]">
+          <div class="grid grid-cols-6 gap-4 mb-4">
             <div class="rounded-2xl overflow-hidden max-h-[338px] col-span-2">
               <img [src]="club.imgLink" alt="" class="w-full h-full">
             </div>
@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <div class="text-[#020A0C] text-[20px] font-[500] leading-[130%] mb-[120px]">
+          <div class="text-black-1 text-xl font-medium leading-[130%] mb-[120px]">
             <p class="indent-5">Bolajoningiz futbolni yaxshi ko‘radimi? Unda uni bizning futbol mashg‘ulotlariga olib keling! Har bir darsda bolalar nafaqat zarba berish va to‘p nazorati kabi texnikalarni o‘rganadi, balki jamoada ishlash, fidoyilik va mas’uliyatni ham o‘zlashtiradi.</p>
             <p>🔹 Tajribali murabbiylar, do‘stona muhit va bolalar uchun qulay yondashuv.</p>
             <p>🔸 Mashg‘ulotlar haftaning turli kunlarida, qulay vaqtlarda o‘tkaziladi.</p>
@@ -66,57 +66,57 @@
 
 
           <div>
-            <div class="mb-[20px]">
-              <p class="text-[#020A0C] text-[40px] font-[700] font-['Lato']! leanding-[120%]">Dars jadvali</p>
+            <div class="mb-5">
+              <p class="text-black-1 text-[40px] font-bold font-['Lato']! leanding-[120%]">{{ 'clubs.lesson-schedule' | transloco }}</p>
             </div>
 
-            <div class="">
-              <app-lesson-schedule></app-lesson-schedule>
+            <div class="mb-[120px]">
+              <app-lesson-schedule [club]="club"></app-lesson-schedule>
             </div>
           </div>
 
         </div>
 
         <div class="col-span-3 col-start-10">
-          <div class="rounded-2xl overflow-hidden w-full border border-[#EAECF2] mb-[12px]">
+          <div class="rounded-2xl overflow-hidden w-full border border-black-7 mb-3">
             <div class="relative">
               <img src="./assets/imgs/map.png" alt="Map" class="w-full" />
-              <button class="absolute bottom-4 left-1/2 bg-blue-600 -translate-x-1/2 rounded-xl flex items-center gap-2 py-[12px] px-[16px]">
-                <span class="icon-map-point text-[24px]"></span>
-                <p class="text-[#FFFFFF] text-[20px] font-[600] leading-[120%] text-nowrap">Xaritadan ko‘rish</p>
+              <button class="absolute bottom-4 left-1/2 bg-blue-600 -translate-x-1/2 rounded-xl flex items-center gap-2 py-3 px-4" (click)="openMap()">
+                <span class="icon-map-point text-blue-3 text-2xl"></span>
+                <p class="text-[#FFFFFF] text-xl font-semibold leading-[120%] text-nowrap">{{ 'clubs.view-on-map' | transloco }}</p>
               </button>
             </div>
-            <div class="p-[16px] bg-[#fff]">
-              <p class="text-[#1C79C0] text-[18px] font-[500] leading-[130%] underline">{{club.location}}</p>
+            <div class="p-4 bg-white">
+              <p class="text-blue-2 text-lg font-medium leading-[130%] underline">{{club.location}}</p>
             </div>
           </div>
 
-          <div class="p-[16px] rounded-2xl border border-[#EAECF2] flex flex-col gap-[12px] bg-[#fff]">
-            <div class="flex items-center gap-[7px] bg-[#F6F7FB] py-[4px] px-[8px] rounded-[8px] border border-[#EAECF2]">
-              <span class="icon-city text-[22px] text-[#1C79C0]"></span>
-              <p class="text-[#393F48] text-[20px] font-[500] leading-[130%]">{{club.city}}</p>
+          <div class="p-4 rounded-2xl border border-black-7 flex flex-col gap-3 bg-white">
+            <div class="flex items-center gap-[7px] bg-black-8 py-1 px-2 rounded-lg border border-black-7">
+              <span class="icon-city text-[22px] text-blue-2"></span>
+              <p class="text-black-2 text-xl font-medium leading-[130%]">{{club.city}}</p>
             </div>
-            <div class="flex items-center gap-[7px] bg-[#F6F7FB] py-[4px] px-[8px] rounded-[8px] border border-[#EAECF2]">
-              <span class="icon-phone text-[22px] text-[#1C79C0]"></span>
-              <p class="text-[#393F48] text-[20px] font-[500] leading-[130%]">{{club.phoneNumber}}</p>
+            <div class="flex items-center gap-[7px] bg-black-8 py-1 px-2 rounded-lg border border-black-7">
+              <span class="icon-phone text-[22px] text-blue-2"></span>
+              <p class="text-black-2 text-xl font-medium leading-[130%]">{{club.phoneNumber}}</p>
             </div>
-            <div class="flex items-center justify-center gap-[7px] py-[10px] rounded-[12px] border border-[#EAECF2]">
-              <p class="text-[#00205B] text-[24px] font-[700] font-['Lato'] leading-[120%]">{{club.price}} so`m</p>
+            <div class="flex items-center justify-center gap-[7px] py-[10px] rounded-xl border border-black-7">
+              <p class="text-blue-1 text-2xl font-bold font-['Lato'] leading-[120%]">{{club.price}} so`m</p>
             </div>
-            <div class="flex items-center justify-center gap-[7px] bg-[#FE830C] py-[10px] rounded-[12px] border border-[#EAECF2] cursor-pointer">
-              <span class="icon-phone text-[22px] text-[#1C79C0]"></span>
-              <p class="text-[#fff] text-[20px] font-[500] leading-[130%]">Yozilish</p>
-            </div>
+            <a [routerLink]="'/clubs/registration/' + club.id" class="flex items-center justify-center gap-[7px] bg-yellow-1 py-[10px] rounded-xl border border-black-7 cursor-pointer">
+              <span class="icon-phone text-[22px] text-blue-2"></span>
+              <p class="text-white text-xl font-medium leading-[130%]">{{ 'clubs.register' | transloco}}</p>
+            </a>
           </div>
         </div>
       </div>
 
       <div>
-        <div class="mb-[20px]">
-          <p class="text-[#020A0C] text-[40px] font-[700] font-['Lato']! leanding-[120%]">Futbol to‘garagi</p>
+        <div class="mb-5">
+          <p class="text-black-1 text-[40px] font-bold font-['Lato']! leanding-[120%]">{{ 'clubs.other-lessons' | transloco }}</p>
         </div>
 
-        <div class="grid grid-cols-1 gap-[12px] pb-[16px]">
+        <div class="grid grid-cols-1 gap-3 pb-4">
           @for(club of currentData; track club.id){
             <app-club-block [club]="club"></app-club-block>
           }
@@ -125,5 +125,11 @@
 
     </div>
   </div>
+
+  @if(isOpenMap){
+    <div class="realative">
+      <app-map-block (closeMap)="openMap()" [club]="club" [isOpenMap]="isOpenMap"></app-map-block>
+    </div>
+  }
 }
 

@@ -1,0 +1,27 @@
+
+<div class="bg-black-8">
+  <div class="max-w-[1640px] mx-auto pt-20 pb-[120px]">
+    <div class="flex flex-col items-center gap-5">
+      <p class="text-black-1 text-[28px] font-bold font-[Lato]! leading-[120%]">Tizimga kirish</p>
+      <div class="p-4 rounded-2xl bg-white max-w-[548px]">
+        <div class="bg-black-7 grid grid-cols-2 gap-[3px] p-[3px] rounded-xl mb-4">
+          <button class="flex items-center justify-center gap-2 py-2.5 px-8 rounded-[10px] cursor-pointer"
+            (click)="isOneId = true"
+            [ngClass]="{'bg-white': isOneId}">
+            <span class="icon-user text-black-4" [ngClass]="{'text-blue-2': isOneId}"></span>
+            <p class="text-black-3 text-xl font-semibold leading-[120%]" [ngClass]="{'text-black-1!': isOneId}">Foydalanuvchilar</p>
+          </button>
+          <button class="flex items-center justify-center gap-2 py-2.5 px-8 rounded-[10px] cursor-pointer" (click)="isOneId = false" [ngClass]="{'bg-white': !isOneId}">
+            <span class="icon-city text-black-4" [ngClass]="{'text-blue-2': !isOneId}"></span>
+            <p class="text-black-3 text-xl font-semibold leading-[120%]" [ngClass]="{'text-black-1!': !isOneId}">Tashkilotlar</p>
+          </button>
+        </div>
+        @if(isOneId){
+          <app-one-id></app-one-id>
+        }@else{
+          <app-login></app-login>
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+
+<app-full-breadcrumb></app-full-breadcrumb>
+
+<div class="bg-black-8">
+  <div class="max-w-[1640px] mx-auto pt-20 pb-[120px] ">
+    <div class="grid grid-cols-7 gap-4 mb-8">
+      <div class="py-[11px] px-3 border-[1px] border-black-6 rounded-xl flex items-center gap-3 bg-white grow">
+        <span class="icon-search text-[22px] text-blue-2"></span>
+        <input type="text" class="w-full placeholder:text-black-3 text-xl font-medium outline-none border-none leading-[130%]" placeholder="{{ 'lesson-schedule.place-holders.search' | transloco }}" (input)="search($event)">
+      </div>
+
+      <p-select [options]="categories" [(ngModel)]="selectedCategory" placeholder="{{ 'lesson-schedule.place-holders.category' | transloco }}" class="w-full bg-black placeholder:text-black-3 text-xl font-medium outline-none border-none leading-[130%]" />
+      <p-select [options]="categories" [(ngModel)]="selectedCategory" placeholder="{{ 'lesson-schedule.place-holders.type-of-club' | transloco }}" class="w-full bg-black placeholder:text-black-3 text-xl font-medium outline-none border-none leading-[130%]" />
+      <p-select [options]="provinces" [(ngModel)]="selectedCategory" placeholder="{{ 'lesson-schedule.place-holders.region' | transloco }}" class="w-full bg-black placeholder:text-black-3 text-xl font-medium outline-none border-none leading-[130%]" />
+      <p-select [options]="categories" [(ngModel)]="selectedCategory" placeholder="{{ 'lesson-schedule.place-holders.type-of-school' | transloco }}" class="w-full bg-black placeholder:text-black-3 text-xl font-medium outline-none border-none leading-[130%]" />
+      <p-select [options]="regions" [(ngModel)]="selectedCategory" placeholder="{{ 'lesson-schedule.place-holders.district' | transloco }}" class="w-full bg-black placeholder:text-black-3 text-xl font-medium outline-none border-none leading-[130%]" />
+
+      <p-calendar
+        class="full-size"
+        [(ngModel)]="range"
+        dateFormat="dd.mm.yy"
+        [inputStyle]="{ width: '400px', padding:'11px'}"
+        placeholder="{{ 'lesson-schedule.place-holders.month' | transloco }}"
+      ></p-calendar>
+
+    </div>
+    <div class="">
+      <app-lesson-schedule-list [clubs]="clubs"></app-lesson-schedule-list>
+    </div>
+  </div>
+</div>

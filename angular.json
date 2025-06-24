@@ -33,7 +33,7 @@
             ],
             "styles": [
               "src/assets/fonts/icomoon/style.css",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },

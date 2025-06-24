@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 import { BreadcrumbService } from '../breadcrumb/breadcrumb.service';
 import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-full-breadcrumb',
@@ -12,4 +13,8 @@ import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
 export class FullBreadcrumbComponent {
   breadCrumbService = inject(BreadcrumbService);
   breadCrumbTitle = this.breadCrumbService.breadcrumbs$;
+
+   private route: ActivatedRoute = inject(ActivatedRoute);
+  ngOnInit(){
+  }
 }

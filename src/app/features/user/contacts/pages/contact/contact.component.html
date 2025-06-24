@@ -1,0 +1,71 @@
+
+
+<app-full-breadcrumb></app-full-breadcrumb>
+
+@if(contact){
+  <div class="bg-black-8">
+    <div class="max-w-[1640px] mx-auto pt-20 pb-[120px]">
+      <div class="flex gap-2">
+        <div class="rounded-2xl overflow-hidden border border-black-7 bg-white">
+          <img src="./assets/imgs/contact/img.png" alt="">
+        </div>
+        <div class="max-w-[820px] flex flex-col gap-5 p-5 rounded-2xl bg-white">
+          <p class="text-black-1 text-[32px] font-bold font-['Lato']! leading-[120%]">{{contact.name}}</p>
+          <hr class="border-black-7">
+          <div class="flex items-center flex-wrap gap-x-14.5 gap-y-4">
+            <div class="flex items-center gap-1.5">
+              <span class="icon-phone text-2xl text-blue-2"></span>
+              <p class="text-black-2 text-xl font-medium leading-[130%]">{{contact.phoneNumber}}</p>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="icon-email text-xl text-blue-2"></span>
+              <p class="text-black-2 text-xl font-medium leading-[130%]">{{contact.email}}</p>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="icon-phone text-2xl text-blue-2"></span>
+              <p class="text-black-2 text-xl font-medium leading-[130%]">{{contact.link}}</p>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="icon-location text-2xl text-blue-2"></span>
+              <p class="text-black-2 text-xl font-medium leading-[130%]">{{contact.location}}</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-4 grow content-end">
+            <div class="flex flex-col gap-4 p-4 bg-black-8 rounded-2xl border border-black-7">
+              <span class="icon-buildings text-[40px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+              <div class="">
+                <p class="text-black-1 text-2xl font-bold font-['Lato']! leading-[120%] mb-1.5">{{contact.bams}}</p>
+                <p class="text-black-3 text-lg font-medium leading-[130%]">{{ 'contact.bams' | transloco}}</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 p-4 bg-black-8 rounded-2xl border border-black-7">
+              <span class="icon-academic-cap text-[40px]"><span class="path1 before:text-[#1c79c0]!"></span><span class="path2 before:text-[#1c79c0]!"></span></span>
+              <div class="">
+                <p class="text-black-1 text-2xl font-bold font-['Lato']! leading-[120%] mb-1.5">{{contact.clubs}}</p>
+                <p class="text-black-3 text-lg font-medium leading-[130%]">{{ 'contact.clubs' | transloco}}</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 p-4 bg-black-8 rounded-2xl border border-black-7">
+              <span class="icon-backpack text-[40px]"><span class="path1 before:text-[#1c79c0]!"></span><span class="path2 before:text-[#1c79c0]!"></span><span class="path3 before:text-[#1c79c0]!"></span></span>
+              <div class="">
+                <p class="text-black-1 text-2xl font-bold font-['Lato']! leading-[120%] mb-1.5">{{contact.clubsPeople}}</p>
+                <p class="text-black-3 text-lg font-medium leading-[130%] text-nowrap">{{ 'contact.clubs-members' | transloco}}</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 p-4 bg-black-8 rounded-2xl border border-black-7">
+              <span class="icon-users-group text-[40px]"><span class="path1 before:text-[#1c79c0]!"></span><span class="path2 before:text-[#1c79c0]!"></span><span class="path3 before:text-[#1c79c0]!"></span><span class="path4 before:text-[#1c79c0]!"></span><span class="path5 before:text-[#1c79c0]!"></span><span class="path6 before:text-[#1c79c0]!"></span></span>
+              <div class="">
+                <p class="text-black-1 text-2xl font-bold font-['Lato']! leading-[120%] mb-1.5">{{contact.employees}}</p>
+                <p class="text-black-3 text-lg font-medium leading-[130%]">{{ 'contact.employees' | transloco}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <img src="./assets/imgs/contact/map.png" alt="" class="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+}

@@ -15,4 +15,11 @@ export const ClubsRoutes: Route[] = [
     },
     loadComponent: ()=> import("./pages/club/club.component")
   },
+  {
+    path: "registration/:id",
+    data: {
+      breadcrumb: 'Yozilish'
+    },
+    loadComponent: ()=> import("./pages/club-registration/club-registration.component")
+  },
 ]

@@ -3,10 +3,11 @@ import { NewsBlockComponent } from './news-block/news-block.component';
 import { INews } from '../../../../../shared/models/news.model';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-news-list',
-  imports: [NewsBlockComponent, CalendarModule, FormsModule],
+  imports: [NewsBlockComponent, CalendarModule, FormsModule, TranslocoPipe],
   templateUrl: './news-list.component.html',
   styleUrl: './news-list.component.scss'
 })

@@ -1,10 +1,10 @@
 
-<div class="rounded-[20px] relative overflow-hidden">
-  <img [src]="data.imgUrl" alt="" width="100%">
+<div class="rounded-[20px] h-full relative overflow-hidden">
+  <img [src]="data.imgLink" alt="" class="h-full">
   <div class="absolute w-full h-full top-0" style="background: linear-gradient(to bottom, #ffffff00, #00000080);"></div>
 
   <div class="absolute bottom-[20px] left-[20px]">
-    <p class="text-[28px] text-[white] font-[700] font-['Lato']!">{{data.title}}</p>
-    <p class="text-[18px] text-[white] font-[400]">{{data.numberOfLesson}} {{data.text}}</p>
+    <p class="text-[28px] text-[white] font-bold font-['Lato']!">{{data.title.split(" ")[0]}}</p>
+    <p class="text-lg text-[white] font-normal">{{data.numberOfLesson}} {{ 'main.lesson.club-text' | transloco }}</p>
   </div>
 </div>

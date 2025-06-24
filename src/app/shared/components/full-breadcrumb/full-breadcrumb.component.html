@@ -1,14 +1,14 @@
 
 
-<div class="bg-[#00205B]">
+<div class="bg-blue-1">
   <div class="max-w-[1640px] mx-auto relative h-[200px] flex items-center justify-between overflow-hidden min-[1640px]:overflow-visible">
-    <div class="flex flex-col gap-[12px]">
+    <div class="flex flex-col gap-3">
       <app-breadcrumb color="white"></app-breadcrumb>
-      <h3 class="text-[50px] font-[700] text-[white] font-['Lato']! leading-[120%]" *ngIf="breadCrumbTitle | async as title">{{title[title.length-1].label}}</h3>
+      <h3 class="text-[50px] font-bold text-[white] font-['Lato']! leading-[120%]" *ngIf="breadCrumbTitle | async as title">{{title[title.length-1].label}}</h3>
     </div>
     <div class="absolute right-[-140px] top-0 bottom-0 h-full">
-      <span class="icon-45-line text-[200px] absolute"></span>
-      <img ngSrc="./assets/imgs/breadcrumbs-img.png" alt="" class="h-full" width="500" height="200">
+      <span class="icon-45-line text-blue-2 text-[200px] absolute"></span>
+      <img ngSrc="./assets/imgs/breadcrumbs-img.png" alt="" class="h-full" width="500" height="200" priority>
     </div>
   </div>
 </div>
